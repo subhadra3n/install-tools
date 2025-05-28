@@ -1,0 +1,28 @@
+# Configure cgroup driver used by kubelet on control-plane.(Only on master node)
+	sudo docker info | grep -i cgroup
+
+echo "Environment="KUBELET_CGROUP_ARGS=--cgroup-driver=cgroupfs"" >> /etc/systemd/system/kubelet.service.d/10-kubeadm.conf
+
+systemctl restart kubelet
+
+systemctl daemon-reload
+
+
+
+# Initialising the control-plane node run the below command on the (master node)
+sudo kubeadm init
+
+# If we get error wrt container runtime not running , execute the below commands
+
+rm /etc/containerd/config.toml
+systemctl restart containerd
+
+
+
+#Set up local kubeconfig:
+mkdir -p $HOME/.kube
+sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+sudo chown $(id -u):$(id -g) $HOME/.kube/config
+
+# If you need to generate a new tokem use the below command (Optional Not required , if you have the above token generated)
+    sudo kubeadm token create --print-join-command
