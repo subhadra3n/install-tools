@@ -1,0 +1,4 @@
+Execute the command that is been generated as the output of the previous command, where we got the token generated. 
+It will be similar to the below command
+
+sudo kubeadm join 10.18.0.30:6443 --token 06fdx2qa.v2jxfdfdflapu54gi3s41 --discovery-token-ca-cert-hash sha256:ed92e6bdfd6d7e27abc8f9247d6de33a7dfd56b57a250195d57647bf3138c9a4e7d7a8
