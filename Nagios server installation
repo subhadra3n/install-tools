@@ -1,0 +1,57 @@
+  sudo apt update
+    apt-get update -y
+     apt-get install wget unzip vim curl openssl build-essential libgd-dev libssl-dev libapache2-mod-php php-gd php apache2 -y
+     useradd nagios
+     groupadd nagcmd
+     usermod -aG nagcmd nagios
+     
+     usermod -aG nagios,nagcmd www-data 
+     
+     
+     wget https://assets.nagios.com/downloads/nagioscore/releases/nagios-4.4.7.tar.gz
+     tar -xvzf nagios-4.4.7.tar.gz
+     ls
+     cd nagios-4.4.7
+     ls -ltrh
+     ./configure --with-httpd-conf=/etc/apache2/sites-enabled
+     make all
+     make install-groups-users
+     make install
+     make install-daemoninit
+     make install-commandmode
+     make install-config
+     make install-webconf
+     a2enmod rewrite cgi
+     systemctl restart apache2
+     make install-exfoliation
+     htpasswd -c /usr/local/nagios/etc/htpasswd.users nagiosadmin
+     wget https://github.com/nagios-plugins/nagios-plugins/releases/download/release-2.4.0/nagios-plugins-2.4.0.tar.gz
+     ls
+     tar -xvzf nagios-plugins-2.4.0.tar.gz
+     ll
+     cd nagios-plugins-2.4.0
+     ls -ltrh
+     ./configure --with-nagios-user=nagios --with-nagios-group=nagios
+     make
+    make install
+/usr/local/nagios/bin/nagios -v /usr/local/nagios/etc/nagios.cfg
+vim /usr/local/nagios/etc/nagios.cfg  #uncomment 51th line----:51
+mkdir -p /usr/local/nagios/servers
+vim  /usr/local/nagios/etc/objects/contacts.cfg  #give your mail id
+
+
+#add below lines in a file
+#DESC="Nagios"
+
+#NAME=nagios
+#DAEMON=/usr/local/nagios/bin/$NAME
+#DAEMON_ARGS="-d /usr/local/nagios/etc/nagios.cfg"
+#PIDFILE=/usr/loacl/nagios/etc/nagios.cfg"
+#PIDFILE=/usr/loacl/nagios/var/$NAME.lock
+~                                                                                                                                                                      
+~                                          
+##
+
+
+
+
