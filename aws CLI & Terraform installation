@@ -1,0 +1,22 @@
+#
+terraform 
+aws cli--install
+
+
+curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+unzip awscliv2.zip
+sudo ./aws/install
+
+#Now install terraform:  
+sudo snap install terraform --classic
+____________________________________
+aws configure
+
+
+
+#after creating dir---cd to that dir
+#upload--main.tf,variables.tf, output.tf
+
+terraform init
+terraform plan
+terraform apply --auto-approve
