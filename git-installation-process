@@ -12,6 +12,14 @@ git init
 check it is in HTTPS OR SSH-----------git -version------displays--http/ssh 
 convert to ssh by below command
 
+
 git remote set-url origin git@github.com:subhadra3n/install-tools.git
 
+then opereate all the commands---
+git add .
+or
+git add filename
+git commit -m "update message"
+git push origin main/master-branch--------------
 
+git rm filename
