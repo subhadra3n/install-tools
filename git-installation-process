@@ -7,3 +7,11 @@ ssh-keygen
 copy public key and paste it in github--settings--ssh keys
 git init
 
+
+#use only ssh authentication not for password authenticaion for more security--------it accets only ssh not https
+check it is in HTTPS OR SSH-----------git -version------displays--http/ssh 
+convert to ssh by below command
+
+git remote set-url origin git@github.com:subhadra3n/install-tools.git
+
+
