@@ -31,3 +31,8 @@ git checkout branch-name----------to switch to particular branch
 
 git branch -d branch-name------to delete branch in local
 git push origin --delete feature----------delete a branch on github
+____________________________________________________________________________________________________
+if we create new branch----------all the existing files willbe presented inthat new-branch
+once we start creating any new-file, then only that file will store in new-branch 
+& get pull request to merge the changes to master branch
+____________________________________________________________________________________________________
