@@ -23,3 +23,11 @@ git commit -m "update message"
 git push origin main/master-branch--------------
 
 git rm filename
+
+_______________________________________________________
+git branch---------it lists all branches
+git checkout -b new-branch-creates-----------------it will creates new branch and land into that new branch
+git checkout branch-name----------to switch to particular branch
+
+git branch -d branch-name------to delete branch in local
+git push origin --delete feature----------delete a branch on github
