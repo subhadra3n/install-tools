@@ -48,3 +48,12 @@ f1 f2 f3 ----------after git add
 back to staged---or 1step back---git reset --soft HEAD~1
 bac to untack---2steps back from commit--------git reset --mixed HEAD~1
 ____________________________________________________________________________________________________
+
+git rebase
+
+we git clone-----------& make files, changes etc
+if parleley any one can may changes in git hub directly------
+local commit unable to push to ---github --------so we use
+
+git pull --rebase---command with this our local repo got updated ---now we can push to remote
+
