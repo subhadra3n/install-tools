@@ -21,6 +21,11 @@ or
 git add filename
 git commit -m "update message"
 git push origin main/master-branch--------------
+git pull origin branch-name-------------if you are pulling specific branch
+git pull -----------------if you are pulling all branhces
+
+git branch -r--------To see all remote branches after cloning:
+
 
 git rm filename
 
@@ -36,6 +41,15 @@ ________________________________________________________________________________
 if we create new branch----------all the existing files willbe presented inthat new-branch
 once we start creating any new-file, then only that file will store in new-branch 
 & get pull request to merge the changes to master branch
+------------- Types of branches        ---------------------
+1.trunk based
+2.feature branch
+3. release branch 
+4.git flow
+5.env branch------complecated brach---main,dev,staging,testing branch---------again merge into main branch
+
+
+
 ____________________________________________________________________________________________________
 
 f1 f2 f3
@@ -51,10 +65,55 @@ bac to untack---2steps back from commit--------git reset --mixed HEAD~1
 ____________________________________________________________________________________________________
 
 git rebase
-
+case-1--
 we git clone-----------& make files, changes etc
 if parleley any one can may changes in git hub directly------
 local commit unable to push to ---github --------so we use
 
+
+
 git pull --rebase---command with this our local repo got updated ---now we can push to remote
+
+case-2---
+master-------1st made changes & create feature branch
+feature--------made changes by master is reflect here for begining only
+master-----again made changes in master but it won't effect to feature branch
+feature branch--------want update ---files from master---------command -----git rebase master
+***so finally git --feature branch also get same file updation as master branch
+________________________________________________________________________________
+merge
+fast forward merge--------only make changes in sub branch ---not in master branch
+
+merge conflict occurs--------when same file i.e f1--------make changes in both master branch & sub branch (feature branch etc)
+git merge --abort
+
+for exmp
+You’ll get a conflict like this:
+1.Open file.txt, you'll see:
+<<<<<<< HEAD
+Hello from main branch
+=======
+Hello from feature branch
+>>>>>>> feature
+2.Manually resolve it by editing:
+3.if not Optional: Abort the merge (if needed)
+git merge --abort
+
+Summary of conflict resolution steps:
+Step	Command	Purpose
+1	git merge feature	Causes the conflict
+2	Edit file manually	Resolve conflict lines
+3	git add file.txt	Mark resolved
+4	git commit	Finish the merge
+______________________________________________________________________________________________________________________________
+what is shared repo---------nothing but github
+what is your local repo-----our laptops----------where we commiting the code
+branches-                  long lived branches-----only for small changes--------2 branches master & develop------make changes & merge to main branch
+            --, short lived branches-------  --3 branches---main,dev & feature
+feature branch-----------pull from dev branch not from main
+make changes and merge to dev branch later merge to main branch
+
+hotfix branch-----------immediate changes b/c something goes wrong/broken-----fix it and commit that code to main branch
+
+
 
