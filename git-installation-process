@@ -36,3 +36,15 @@ if we create new branch----------all the existing files willbe presented inthat 
 once we start creating any new-file, then only that file will store in new-branch 
 & get pull request to merge the changes to master branch
 ____________________________________________________________________________________________________
+
+f1 f2 f3
+git add f1-------------now it comes to staging
+git restore --staged f1               ------------now i want unstage this f1
+git restore --staged .----------now all files which staged are come back to unstaged--which are last staged
+______________________________________________________________________________________________-
+f1 f2 f3 ----------after git add
+                         git commit
+---------------undo the changes from recent commit----------------------------
+back to staged---or 1step back---git reset --soft HEAD~1
+bac to untack---2steps back from commit--------git reset --mixed HEAD~1
+____________________________________________________________________________________________________
