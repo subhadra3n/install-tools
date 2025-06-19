@@ -64,6 +64,10 @@ back to staged---or 1step back---git reset --soft HEAD~1
 bac to untack---2steps back from commit--------git reset --mixed HEAD~1
 ____________________________________________________________________________________________________
 
+
+PR---pull request---------after commiting -it is a review feature------it check whether we hvae to merge or not
+
+_____________________________________________________________________________________________
 git rebase
 case-1--
 we git clone-----------& make files, changes etc
