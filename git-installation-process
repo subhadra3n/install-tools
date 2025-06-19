@@ -26,6 +26,7 @@ git rm filename
 
 _______________________________________________________
 git branch---------it lists all branches
+git branch name--------create new branch
 git checkout -b new-branch-creates-----------------it will creates new branch and land into that new branch
 git checkout branch-name----------to switch to particular branch
 
