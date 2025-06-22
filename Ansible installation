@@ -8,4 +8,11 @@ sudo apt install ansible -y
 
 ansible --version
 
+next checking-----------ansible localhost -m ping
+o/p should be like this------localhost | SUCCESS => {
+    "changed": false,
+    "ping": "pong"
+}
 
+create file---vi inventory.file-----add nodes-ip address 
+run command---ansible all -m ping -i inventory--(inventory--filename)
