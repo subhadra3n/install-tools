@@ -17,10 +17,12 @@ o/p should be like this------localhost | SUCCESS => {
 create file---vi inventory.file-----add nodes-ip address 
 run command---ansible all -m ping -i inventory--(inventory--filename)
 
-________________________
+________________________------------------------------------
+not yet req to add---just for inteerview purpose 
 next step========define in ansible.cfg
 [defaults]
 this indication should be inthis way only = any name you can mention
 inventory = inventory
 deprecation_warnings = False
 host_key_checking= False
+
