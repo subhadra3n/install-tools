@@ -17,6 +17,14 @@ o/p should be like this------localhost | SUCCESS => {
 create file---vi inventory.file-----add nodes-ip address 
 run command---ansible all -m ping -i inventory--(inventory--filename)
 
+before running playbook use this command as well----------ssh ubuntu@172.31.32.142
+
+ansible -i hosts.ini all -m ping----------inventory file name
+
+check is it conrol server is connecting to node or not
+use this command--------ansible -i hosts.ini all -m ping
+
+
 ________________________------------------------------------
 not yet req to add---just for inteerview purpose 
 next step========define in ansible.cfg
