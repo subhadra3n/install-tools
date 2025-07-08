@@ -41,7 +41,7 @@ job-name:'node-exporter'
  static_configs:
       - targets: ['<your-monitoring-ip>:<your-monitoring-port>']
 
-access it with port num--9100--node exporter
+#access it with port num--9100--node exporter
 ________________________________
 #reload--by using below command
 promtool check config /etc/prometheus/prometheus.yml
