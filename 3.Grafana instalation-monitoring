@@ -1,7 +1,7 @@
 #Install Grafana on Ubuntu 22.04 and Set it up to Work with Prometheus
 
 
-
+ubuntu@ip-172-31-34-62:/etc/prometheus$-----inthis dir only, no need to chaange back dir
 sudo apt-get update
 sudo apt-get install -y apt-transport-https software-properties-common
 
