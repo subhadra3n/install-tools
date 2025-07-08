@@ -1,4 +1,5 @@
 #t2.meduim
+prometheus we can access server with port======9090
 
 sudo useradd --system --no-create-home --shell /bin/false prometheus
 sudo wget https://github.com/prometheus/prometheus/releases/download/v2.47.1/prometheus-2.47.1.linux-amd64.tar.gz
