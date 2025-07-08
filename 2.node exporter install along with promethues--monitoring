@@ -30,6 +30,7 @@ sudo systemctl enable node_exporter
 sudo systemctl start node_exporter
 sudo systemctl status node_exporter
 ______________________________________________-
+now add node-exporter to promethus config
 nano prometheus.yml
 
 #add this content below job
