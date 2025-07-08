@@ -49,4 +49,7 @@ promtool check config /etc/prometheus/prometheus.yml
 #now try to access monitoring and refresh it
 curl -X POST http://localhost:9090/-/reload
 ________________________________________
+after above step---we just reload prometheus webserver which you have already seen prometheus dashbord
+there node exporter is also added
+______________________________________________________-
 after this install grafana
