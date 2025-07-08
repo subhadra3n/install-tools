@@ -33,7 +33,7 @@ ______________________________________________-
 #now add node-exporter to promethus config
 cd /etc/prometheus
 ls
-nano prometheus.yml
+sudo nano prometheus.yml
 
 
 #add this content below job
