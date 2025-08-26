@@ -28,6 +28,16 @@ git branch -r--------To see all remote branches after cloning:
 
 
 git rm filename
+_________________________________________________________________________________________________
+scenario-1
+if files f1,f2 --available in master branch, I want only these 2files to main branch how is it?
+1.stay in main branch---------git checkout main
+git checkout master --filename
+git add file-name
+git commit -m "mssg"
+git push origin main
+
+
 
 _______________________________________________________
 git branch---------it lists all branches
